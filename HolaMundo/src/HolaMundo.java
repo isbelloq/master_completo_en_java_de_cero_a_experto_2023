@@ -3,7 +3,7 @@ public class HolaMundo {
         String saludar = "Hola Mundo desde Java";
         System.out.println("saludar.toUpperCase() = " + saludar.toUpperCase());
 
-        int numero = 10;
+        int numero = 11;
         System.out.println("numero = " + numero);
 
         boolean valor = true;
@@ -15,5 +15,17 @@ public class HolaMundo {
         System.out.println("numero2 = " + numero2);
 
         var numero3 = "15";
+
+        String nombre;
+
+        nombre = "Andres";
+
+        if(numero > 10){
+            nombre  = "Juan";
+        }
+
+        System.out.println("nombre = " + nombre);
+
+        int edadPersona = 5;
     }
 }
