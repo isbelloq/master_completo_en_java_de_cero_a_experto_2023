@@ -1,18 +1,23 @@
 import java.util.Scanner;
 
-public class ProgramaManejoDeNombres{
-    public static void main(String[] Args){
+public class ProgramaManejoDeNombres {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        StringBuilder resultado = new StringBuilder();
 
-        for(int i = 0; i < 3; i++){
-            System.out.print("Ingrese el nombre " + (i+1) + ": ");
-            String nombre = scanner.next();
-            int l = nombre.length();
-            resultado.append(nombre.substring(1,2).toUpperCase()).append(".").append(nombre.substring(l-2,l).toLowerCase()).append("_");
-        }
-        int l = resultado.length();
+        System.out.println("Ingrese un nombre de un familiar:");
+        String nombreA = scanner.nextLine();
+        String nombreA2 = nombreA.toUpperCase().charAt(1) + "." + nombreA.substring(nombreA.length()-2);
 
-        System.out.println(resultado.substring(0, l-1));
+        System.out.println("Ingrese otro nombre de un familiar:");
+        String nombreB = scanner.nextLine();
+        String nombreB2 = nombreB.toUpperCase().charAt(1) + "." + nombreB.substring(nombreB.length()-2);
+
+        System.out.println("Ingrese otro nombre de un familiar:");
+        String nombreC = scanner.nextLine();
+        String nombreC2 = nombreC.toUpperCase().charAt(1) + "." + nombreC.substring(nombreC.length()-2);
+
+        String resultado = nombreA2 + "_" + nombreB2 + "_" + nombreC2;
+
+        System.out.println(resultado);
     }
 }
