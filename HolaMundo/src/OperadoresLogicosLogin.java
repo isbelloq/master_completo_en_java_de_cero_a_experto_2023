@@ -27,17 +27,24 @@ public class OperadoresLogicosLogin{
         boolean esAutenticado = false;
 
         for(int i = 0; i < usernames.length; i++) {
-            if ((usernames[i].equals(u) && passwords[i].equals(p))) {
+            /*if ((usernames[i].equals(u) && passwords[i].equals(p))) {
                 esAutenticado = true;
                 break;
-            }
+            }*/
+
+            esAutenticado = ((usernames[i].equals(u) && passwords[i].equals(p))) ? true: esAutenticado;
         }
 
-        if(esAutenticado){
+        /*if(esAutenticado){
             System.out.println("Bienvenido usuario ".concat(u).concat("!"));
         }else{
             System.out.println("Username o contraseña incorrectos!");
             System.out.println("Lo siento, requiero atenticacion");
-        }
+        }*/
+
+        String mensaje = esAutenticado ? "Bienvenido usuario ".concat(u).concat("!"):
+                "Username o contraseña incorrectos!".concat("\n Lo sentimos, requiero atenticacion");
+
+        System.out.println("mensaje = " + mensaje);
     }
 }
